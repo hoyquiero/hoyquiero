@@ -1,0 +1,15 @@
+p#notice = notice
+
+p
+  strong Name:
+  = @contentful_config.name
+p
+  strong Space:
+  = @contentful_config.space_id
+p
+  strong Access token:
+  = @contentful_config.access_token
+
+= link_to 'Edit', edit_contentful_config_path(@contentful_config)
+'|
+= link_to 'Back', contentful_configs_path

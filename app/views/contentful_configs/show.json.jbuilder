@@ -1,0 +1,1 @@
+json.partial! "contentful_configs/contentful_config", contentful_config: @contentful_config

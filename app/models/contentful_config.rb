@@ -1,0 +1,2 @@
+class ContentfulConfig < ApplicationRecord
+end

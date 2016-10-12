@@ -1,0 +1,1 @@
+json.array! @contentful_configs, partial: 'contentful_configs/contentful_config', as: :contentful_config

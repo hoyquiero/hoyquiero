@@ -1,0 +1,25 @@
+h1 Listing contentful_configs
+
+table
+  thead
+    tr
+      th Name
+      th Space
+      th Access token
+      th
+      th
+      th
+
+  tbody
+    - @contentful_configs.each do |contentful_config|
+      tr
+        td = contentful_config.name
+        td = contentful_config.space_id
+        td = contentful_config.access_token
+        td = link_to 'Show', contentful_config
+        td = link_to 'Edit', edit_contentful_config_path(contentful_config)
+        td = link_to 'Destroy', contentful_config, data: { confirm: 'Are you sure?' }, method: :delete
+
+br
+
+= link_to 'New Contentful config', new_contentful_config_path

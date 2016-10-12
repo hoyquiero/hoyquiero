@@ -1,0 +1,14 @@
+- @eventos.each_slice(3) do |eventos|
+  .eventos
+    - eventos.each do |evento|
+      - color = ['amarillo', 'verde', 'rosa', 'azul'].sample
+      .evento
+        .imagen
+          img*{src: "#{evento.imagen_presentacion.file.url}?w=366"}
+          h2*{class: "#{color}-text"}
+            = evento.nombre
+        .container-color*{class: color}
+          h3
+            = evento.lugares.first.nombre
+          h4
+            = evento.fecha.strftime("%B %d, %Y - %H:%M")
